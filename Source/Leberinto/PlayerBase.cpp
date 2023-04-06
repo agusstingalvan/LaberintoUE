@@ -15,6 +15,7 @@ APlayerBase::APlayerBase()
 	respawns = 3;
 	velocity = 500.0;
 	rotationVelocity = 180.0;
+	keys = 0;
 }
 
 // Called when the game starts or when spawned
@@ -31,7 +32,7 @@ void APlayerBase::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 
-	if (life <= 0 && respawns > 0) {
+	if (life <= 0) {
 		if (respawns > 0) {
 			SetActorLocation(initialPosition);
 			SetActorRotation(initialRotation);

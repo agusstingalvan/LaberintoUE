@@ -14,4 +14,13 @@ class LEBERINTO_API ALeberintoGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
 	
+public:
+	UPROPERTY(VisibleAnywhere)
+	int pickedObjectives;
+	UPROPERTY(EditAnywhere)
+	int objectivesToPick;
+
+	ALeberintoGameModeBase();
+
+	void Tick(float DeltaTime);
 };

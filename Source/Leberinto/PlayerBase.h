@@ -13,6 +13,11 @@ class LEBERINTO_API APlayerBase : public APawn
 
 public:
 	int respawns;
+
+	UPROPERTY(VisibleAnywhere)
+	class ACheckPoint* currentCheckpoint;
+	UPROPERTY(VisibleAnywhere)
+	int keys;
 	UPROPERTY(VisibleAnywhere)
 	FVector initialPosition;
 	UPROPERTY(VisibleAnywhere)
